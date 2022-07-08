@@ -1,0 +1,13 @@
+.{{name}} {
+    width: 60%;
+    height: 300px;
+    outline: 1px solid magenta;
+}
+
+.parent {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

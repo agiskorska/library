@@ -1,0 +1,119 @@
+.parent {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card {
+    position: relative;
+    min-width: 120px;
+    height: 60vh;
+    min-height: 300px;
+    margin: 20px;
+    outline: 1px solid green;
+}
+
+.card-content {
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card-img img {
+    height: 100%;
+    opacity: 0.5;
+    
+}
+
+.content-heading {
+    font-family: 'League Spartan';
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.content-subheading {
+    font-family: "Libre Baskerville";
+    font-style: italic;
+    font-size: 22px;
+}
+
+.content-text {
+    font-family: "Libre Baskerville";
+    font-size: 18px;
+}
+
+.card-button {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'League Spartan';
+  font-size: 20px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.card-button:hover,
+.card-button:focus {
+  background-color: #F082AC;
+}
+
+
+@media screen and (min-width: 600px) {
+    .content-heading {
+        font-size: 50px;
+    }    
+
+    .content-subheading {
+        font-size: 30px;
+    }
+
+    .content-text {
+        font-size: 25px;
+    }
+
+    .card-button {
+        font-size: 30px;
+        height: 50px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .card {
+        width: 600px;
+    }
+
+}
