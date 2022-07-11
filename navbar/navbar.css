@@ -15,11 +15,12 @@
 }
 
 .navbar {
-    height: 15vh;
+    min-height: 15vh;
     width: 100vw;
     background-color: var(--background);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: relative;
 }
 
@@ -52,6 +53,7 @@
     transition: all 0.2s;
     border-radius: 5px;
 }
+
 .hamburger {
     position: relative;
 }
@@ -69,14 +71,16 @@ input[type=checkbox]:checked + label .hamburger .bar-1 {
 
 input[type=checkbox]:checked + label .hamburger .bar-3 {
     right: 0;
-    bottom:50%;
+    bottom: 50%;
     position: absolute;
     transform: rotate(-45deg);
 }
+
 .nav-list {
+    margin: 0;
     position: absolute;
     bottom: -100%;
-    left:0;
+    left: 0;
     background-color: var(--background);
     width: 100%;
     height: 100%;
@@ -92,6 +96,7 @@ input[type=checkbox]:checked + label .hamburger .bar-3 {
     cursor: default;
     transition: all 0.2s;
 }
+
 input[type=checkbox]:checked + label ul {
     opacity: 1;
     pointer-events: all;
@@ -113,4 +118,36 @@ input[type=checkbox]:checked + label ul {
 
 .list-item:hover {
     background-color: var(--background-hover);
+}
+
+@media screen and (min-width: 800px) {
+    .navbar {
+        flex-direction: row;
+    }
+
+    label {
+        position: static;
+        height: 100%;
+        width: 100%;
+    }
+
+    .md-visible {
+        opacity: 1;
+        pointer-events: all;
+        cursor: crosshair;
+    }
+
+    .md-hidden {
+        display: none;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        position: static;
+        height: 100%;
+    }
+
+    .list-item {
+        height: 100%;
+    }
 }
