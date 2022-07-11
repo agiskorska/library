@@ -1,7 +1,5 @@
-.footer {
-    width: 60%;
-    height: 300px;
-    outline: 1px solid magenta;
+* {
+    --background: gray;
 }
 
 .parent {
@@ -10,4 +8,13 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin: 0;
+}
+
+.footer {
+    width: 100%;
+    min-height: 10vh;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--background);
 }
