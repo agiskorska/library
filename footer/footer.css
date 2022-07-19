@@ -18,3 +18,12 @@
     bottom: 0;
     background-color: var(--background);
 }
+
+.footer-nav {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
